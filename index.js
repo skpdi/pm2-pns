@@ -53,7 +53,7 @@ function sendSlack(message) {
   // The JSON payload to send to the Webhook
   var payload = {
     notificationId: conf.notificationId,
-    message: name + ' - ' + event + ' - ' + description,
+    message: JSON.stringify({ name , event , description } ,null,2 ),
     receiverTypeList: [
       'slack'
     ],
@@ -78,9 +78,9 @@ function sendSlack(message) {
 
   // Finally, make the post request to the Slack Incoming Webhook
   request(options, function(err, res, body) {
-    console.log('request response body' , body)
+    // console.log('request response body' , body);
     if (err) return console.error(err);
-    if (body !== 'ok') {
+    if (body && body.slack && body.slack.length >0 && body.slack[0].body!== 'ok') {
       console.error('Error sending notification to Slack, verify that the Slack URL for incoming webhooks is correct.');
     }
   });

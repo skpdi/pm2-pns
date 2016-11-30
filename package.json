@@ -1,6 +1,6 @@
 {
   "name": "pm2-pns",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "PM2 to emit events to Slack through SKP PNS",
   "main": "index.js",
   "repository": {
