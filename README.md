@@ -1,7 +1,24 @@
 # pm2-pns
 this is a pm2 module for sending events &amp; logs from your pm2 process to SKP PNS 
 
+## How to Use
+### install
+``
+pm2 install pm2-pn2
+``
+### setting
+* appKey from atmos.skaplanet.com
+* pns_url : http://apis.skplanetx.com/pns/v1/noti 
+* notificationId from http://wiki.skplanet.com/pages/viewpage.action?pageId=96541629
+* slack_url from slack webhookURL key http://hooks.slack.com/services/[slack_url]
 
+```
+pm2 set pns:appKey [appKey]
+pm2 set pns:pns_url [pns_url]
+pm2 set pns:pns_url [pns_url]
+pm2 set pns:notificationID [notificationId]
+pm2 set pns:slack_url [slack_url]
+```
 ## Acknowledgements
 This application makes use of the following third party libraries:
 
