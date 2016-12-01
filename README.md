@@ -4,7 +4,7 @@ this is a pm2 module for sending events &amp; logs from your pm2 process to SKP 
 ## How to Use
 ### install
 ``
-pm2 install pm2-pn2
+pm2 install pm2-pns
 ``
 ### setting
 * appKey from atmos.skaplanet.com
