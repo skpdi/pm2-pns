@@ -8,16 +8,15 @@ pm2 install pm2-pn2
 ``
 ### setting
 * appKey from atmos.skaplanet.com
-* pns_url : http://apis.skplanetx.com/pns/v1/noti 
+* pns_url : http://apis.skplanetx.com/pns/v1/noti - http://wiki.skplanet.com/pages/viewpage.action?pageId=94533916
 * notificationId from http://wiki.skplanet.com/pages/viewpage.action?pageId=96541629
 * slack_url from slack webhookURL key http://hooks.slack.com/services/[slack_url]
 
 ```
-pm2 set pns:appKey [appKey]
-pm2 set pns:pns_url [pns_url]
-pm2 set pns:pns_url [pns_url]
-pm2 set pns:notificationID [notificationId]
-pm2 set pns:slack_url [slack_url]
+pm2 set pm2-pns:appKey [appKey]
+pm2 set pm2-pns:pns_url [pns_url]
+pm2 set pm2-pns:notificationID [notificationId]
+pm2 set pm2-pns:slack_url [slack_url]
 ```
 ## Acknowledgements
 This application makes use of the following third party libraries:
