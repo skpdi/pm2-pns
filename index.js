@@ -37,7 +37,7 @@ function sendSlack(message) {
 
   // If a Slack URL is not set, we do not want to continue and nofify the user that it needs to be set
   if (!conf.pns_url) {
-    conf.pns_url = 'http://apis.skplanetx.com/pns/'
+    conf.pns_url = 'http://pri-apis.skplanetx.com/pns/v1/noti'
     return console.error("There is no Slack URL set, please set the Slack URL: 'pm2 set pm2-pns:pns_url https://pns_url'");
   }
   if (!conf.notificationId) return console.error("There is no NotificationID set, please set the Slack URL: 'pm2 set pm2-pns:notificationID slackTokenID'")
